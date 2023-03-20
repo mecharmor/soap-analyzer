@@ -4,7 +4,6 @@ const webpackMerge = require('webpack-merge');
 const ZipPlugin = require('zip-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const htmlTemplate = require('html-webpack-template');
 const Package = require('./package.json');

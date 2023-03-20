@@ -6,9 +6,7 @@ var self = module.exports = {
 
   isSOAPRequest: (request) => {
     const { headers } = request.request;
-    const contentType = headers.find((header) => {
-      return header.name === 'Content-Type';
-    });
+    const contentType = headers.find(( { name } ) => name === 'Content-Type' );
     if(contentType) {
       //If the content type header contains 'text/xml'
       if(contentType.value.indexOf('text/xml') > -1) {
