@@ -1,4 +1,4 @@
-name: CI
+name: Build & Publish
 
 on:
   push:
@@ -19,3 +19,8 @@ jobs:
         node-version: '8.1.0'
     - run: npm install
     - run: npm build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: artifact-${{ github.sha }}
+        path: artifacts/${{ github.sha }}
